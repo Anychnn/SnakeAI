@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.6)
+project(SnakeAI)
+include_directories(lib)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_STANDARD 11)
+set(SOURCE_FILES src/GameCtrl.cpp include/GameCtrl.h src/main.cpp src/util/Console.cpp include/util/Console.h src/model/Map.cpp include/model/Map.h src/model/Pos.cpp include/model/Pos.h src/model/Point.cpp include/model/Point.h include/util/util.h src/model/Snake.cpp include/model/Snake.h include/model/Direction.h)
+add_executable(SnakeAI ${SOURCE_FILES})
+link_directories(main.cpp)
