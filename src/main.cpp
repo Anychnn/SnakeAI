@@ -1,10 +1,21 @@
-//
-// Created by Administrator on 2017/5/13.
-//
+#include <windows.h>
+#include <glut.h>
 #include <iostream>
-#include "../include/GameCtrl.h"
-int main(){
-//    auto game=GameCtrl::getInstance();
-//    return game->run();
-    return 0;
+#include <cstdlib>
+#include <SnakeManager.h>
+
+using namespace std;
+
+int main(int argc, char ** argv) {
+	SnakeManager snakeManager;
+	snakeManager.init(&argc,argv);
+    //调整刷新频率
+    snakeManager.setInterval(1000);
+    //设置地图大小
+    snakeManager.setRowCount(10);
+    snakeManager.setColCount(10);
+
+	snakeManager.startGame();
+	system("pause");
+	return(0);
 }
