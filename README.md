@@ -1,6 +1,8 @@
 "# SnakeAI" 
 
-界面基于OpenGl
+界面基于OpenGl，如果需要编译项目，需要下载Opengl库文件,用cmake文件进行编译
+
+out目录下有windows系统下的的可执行文件
 
 待完善：
 1. 使用A*寻路算法代替BFS，BFS并不是最优路径，有可能绕远路
