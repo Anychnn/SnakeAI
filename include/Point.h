@@ -7,9 +7,10 @@
 
 
 #include "Pos.h"
-
+#include <cstdint>
 class Point {
 public:
+    static const int MAX_VALUE=UINT32_MAX;
     enum Type{
         EMPTY,
         SNAKE_BODY,
@@ -18,15 +19,32 @@ public:
         WALL,
         FOOD
     };
-    Point();
+
+    Point(const Pos &pos=Pos(-1,-1));
 
     virtual ~Point();
-
     void setType(Type type);
+    int getX();
+    int getY();
 
-private:
-    Pos pos;
+    int getDist() const;
+    void setDist(int dist);
+
+    const Pos &getParent() const;
+
+    void setParent(const Pos &parent);
+
+    bool isVisited() const;
+
+    void setVisited(bool visited);
+
     Type type;
+    Pos pos;
+    Pos parent;
+    int dist;
+    bool visited;
+private:
+
 };
 
 

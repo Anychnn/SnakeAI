@@ -20,20 +20,23 @@ public:
     void setInterval(int interval);
 
     void setRowCount(int rowCount);
-
     void setColCount(int colCount);
+    int getRowCount() const;
+    int getColCount() const;
     void init(int * argc,char ** argv);
     void startGame();
     void drawFood(Pos &food);
-    void drawSnake(Snake &snake);
+    void drawMap();
+    void draw();
     void initSnake();
+    void initBoard();
 public:
+    Snake snake;
+    Board *board= nullptr;
 private:
     int rowCount=4;
     int colCount=4;
     int interval=200;
-    Board *board= nullptr;
-    Snake snake;
 };
 
 

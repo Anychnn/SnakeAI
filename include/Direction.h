@@ -6,8 +6,12 @@
 #define SNAKEAI_DIRECTION_H
 
 
-class Direction {
-
+enum Direction{
+    NONE,
+    LEFT,
+    RIGHT,
+    UP,
+    DOWN
 };
 
 
